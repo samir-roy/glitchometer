@@ -1,6 +1,6 @@
 {
   "name": "@samiroy/glitchometer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React widget to display stats as seen on samiroy.com",
   "main": "dist-pkg/index.js",
   "module": "dist-pkg/index.js",
@@ -39,7 +39,7 @@
     "build:js": "babel src --out-dir dist-pkg --copy-files --extensions \".js,.ts,.tsx,.jsx\" --source-maps inline",
     "build:types": "tsc --declaration --outDir dist-pkg/ --emitDeclarationOnly --declarationMap",
     "clean": "del-cli --force dist-pkg",
-    "lint": "eslint ./src --quiet --ext .js,.ts,.tsx",
+    "lint": "eslint ./src --quiet --ext .js,.ts,.tsx && eslint ./test --quiet --ext .ts,.tsx",
     "test": "jest test/",
     "typecheck": "tsc --noEmit"
   },
