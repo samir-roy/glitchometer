@@ -112,6 +112,7 @@ const Digit: React.FC<Props> = ({ d, color = 'var(--text-color)' }) => {
     case '.':
       return (
         <svg width="10" height="54" viewBox="0 0 10 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <title>{d}</title>
           <path
             d="M2.112 32.648H7.488C9.216 32.648 9.6 33.032 9.6 34.76V42.888C9.6 44.616 9.216 45 7.488 45H2.112C0.384 45 0 44.616 0 42.888V34.76C0 33.032 0.384 32.648 2.112 32.648Z"
             fill={color}
