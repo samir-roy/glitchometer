@@ -4,7 +4,7 @@ import Glitchometer from '../src';
 
 describe('snapshot tests', () => {
   it('should render all digits', () => {
-    const tree = renderer.create(<Glitchometer value="90,345" />).toJSON();
+    const tree = renderer.create(<Glitchometer value="91,345.02%" />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
