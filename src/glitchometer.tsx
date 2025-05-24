@@ -10,6 +10,8 @@ type Props = {
   primary?: string;
   /** Color of secondary glitch */
   secondary?: string;
+  /** Width of container */
+  width?: number;
 };
 
 const Glitchometer: React.FC<Props> = ({
@@ -17,12 +19,13 @@ const Glitchometer: React.FC<Props> = ({
   color = 'var(--text-color)',
   primary = 'var(--primary-glitch-color)',
   secondary = 'var(--secondary-glitch-color)',
+  width = 320,
 }) => (
   <div style={{ position: 'relative', height: 56, width: '100%' }}>
-    <div className="glitch-primary" style={getStyle(-3, 1)}>
+    <div className="glitch-primary" style={getStyle(-3, 1, width)}>
       <Odometer value={value} color={primary} />
     </div>
-    <div className="glitch-secondary" style={getStyle(3, 1)}>
+    <div className="glitch-secondary" style={getStyle(3, 1, width)}>
       <Odometer value={value} color={secondary} />
     </div>
     <div style={getStyle(0, 2)}>
@@ -31,11 +34,11 @@ const Glitchometer: React.FC<Props> = ({
   </div>
 );
 
-const getStyle = (glitch = 0, zIndex = 1): React.CSSProperties => ({
+const getStyle = (glitch = 0, zIndex = 1, width = 320): React.CSSProperties => ({
   position: 'absolute',
   zIndex,
   left: '50%',
-  width: 250,
+  width,
   transform: `translate(calc(-50% ${glitch < 0 ? '-' : '+'} ${Math.abs(glitch)}px), 0px)`,
   WebkitTransform: `translate(calc(-50% ${glitch < 0 ? '-' : '+'} ${Math.abs(glitch)}px), 0px)`,
 });

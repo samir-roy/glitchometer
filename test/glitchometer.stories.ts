@@ -6,7 +6,6 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
   argTypes: {
     value: { control: 'text', description: 'Value to display' },
     color: { control: 'color', description: 'Main text color' },
@@ -19,27 +18,6 @@ export default meta;
 
 export const Default = {
   args: {
-    value: '12,345',
-  },
-};
-
-export const CustomColors = {
-  args: {
-    value: '67,890',
-    color: '#2a9d8f',
-    primary: '#e76f51',
-    secondary: '#e9c46a',
-  },
-};
-
-export const Percentage = {
-  args: {
-    value: '99.9%',
-  },
-};
-
-export const LongNumber = {
-  args: {
-    value: '1,234,567.89',
+    value: '9,341.02%',
   },
 };
