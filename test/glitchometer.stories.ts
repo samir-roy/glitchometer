@@ -1,7 +1,6 @@
-import React from 'react';
 import Glitchometer from '../src/glitchometer';
 
-export default {
+const meta = {
   title: 'Components/Glitchometer',
   component: Glitchometer,
   parameters: {
@@ -15,6 +14,8 @@ export default {
     secondary: { control: 'color', description: 'Secondary glitch color' },
   },
 };
+
+export default meta;
 
 export const Default = {
   args: {
