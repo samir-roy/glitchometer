@@ -1,0 +1,15 @@
+:root {
+  --background-color: #f1f1f1;
+  --text-color: #232129;
+  --primary-glitch-color: #fff500;
+  --secondary-glitch-color: #8bb9ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1f2126;
+    --text-color: #efefef;
+    --primary-glitch-color: #324a74;
+    --secondary-glitch-color: #7d374c;
+  }
+}

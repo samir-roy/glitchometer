@@ -17,22 +17,19 @@ const Glitchometer: React.FC<Props> = ({
   color = 'var(--text-color)',
   primary = 'var(--primary-glitch-color)',
   secondary = 'var(--secondary-glitch-color)',
-}) => {
-
-  return (
-    <div style={{ position: 'relative', height: 56, width: '100%' }}>
-      <div style={getStyle(-3, 1)}>
-        <Odometer value={value} color={primary} />
-      </div>
-      <div style={getStyle(3, 1)}>
-        <Odometer value={value} color={secondary} />
-      </div>
-      <div style={getStyle(0, 2)}>
-        <Odometer value={value} color={color} />
-      </div>
+}) => (
+  <div style={{ position: 'relative', height: 56, width: '100%' }}>
+    <div className="glitch-primary" style={getStyle(-3, 1)}>
+      <Odometer value={value} color={primary} />
     </div>
-  );
-};
+    <div className="glitch-secondary" style={getStyle(3, 1)}>
+      <Odometer value={value} color={secondary} />
+    </div>
+    <div style={getStyle(0, 2)}>
+      <Odometer value={value} color={color} />
+    </div>
+  </div>
+);
 
 const getStyle = (glitch = 0, zIndex = 1): React.CSSProperties => ({
   position: 'absolute',
