@@ -11,6 +11,7 @@ exports[`snapshot tests should render all digits 1`] = `
   }
 >
   <div
+    className="glitch-primary"
     style={
       {
         "WebkitTransform": "translate(calc(-50% - 3px), 0px)",
@@ -239,6 +240,7 @@ exports[`snapshot tests should render all digits 1`] = `
     </div>
   </div>
   <div
+    className="glitch-secondary"
     style={
       {
         "WebkitTransform": "translate(calc(-50% + 3px), 0px)",
