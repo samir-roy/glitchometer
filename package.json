@@ -1,6 +1,6 @@
 {
   "name": "@samiroy/glitchometer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React widget to display stats as seen on samiroy.com",
   "main": "dist-pkg/index.js",
   "module": "dist-pkg/index.js",
