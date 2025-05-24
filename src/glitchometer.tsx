@@ -18,26 +18,27 @@ const Glitchometer: React.FC<Props> = ({
   primary = 'var(--primary-glitch-color)',
   secondary = 'var(--secondary-glitch-color)',
 }) => (
-  <div style={{ position: 'relative', height: 56, width: '100%' }}>
+  <div style={{ position: 'relative' }}>
     <div className="glitch-primary" style={getStyle(-3, 1)}>
       <Odometer value={value} color={primary} />
     </div>
-    <div className="glitch-secondary" style={getStyle(3, 1)}>
+    <div className="glitch-secondary" style={getStyle(3, 2)}>
       <Odometer value={value} color={secondary} />
     </div>
-    <div style={getStyle(0, 2)}>
+    <div style={getStyle(0, 3)}>
       <Odometer value={value} color={color} />
+    </div>
+    <div>
+      <Odometer value={value} color="#00000000" />
     </div>
   </div>
 );
 
-const getStyle = (glitch = 0, zIndex = 1): React.CSSProperties => ({
+const getStyle = (left = 0, zIndex = 1): React.CSSProperties => ({
   position: 'absolute',
+  left,
+  width: '100%',
   zIndex,
-  left: '50%',
-  width: 250,
-  transform: `translate(calc(-50% ${glitch < 0 ? '-' : '+'} ${Math.abs(glitch)}px), 0px)`,
-  WebkitTransform: `translate(calc(-50% ${glitch < 0 ? '-' : '+'} ${Math.abs(glitch)}px), 0px)`,
 });
 
 export default Glitchometer;

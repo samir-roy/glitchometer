@@ -8,7 +8,7 @@
   "parserOptions": { "project": "./tsconfig.json" },
   "overrides": [
     {
-      "files": ["test/*.tsx"],
+      "files": ["test/*.tsx", "test/*.ts"],
       "parserOptions": {
         "project": "test/tsconfig.json",
       }
