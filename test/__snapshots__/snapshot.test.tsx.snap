@@ -2,26 +2,11 @@
 
 exports[`snapshot tests should render all digits 1`] = `
 <div
-  style={
-    {
-      "height": 56,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  style="position: relative; height: 56px; width: 100%;"
 >
   <div
-    className="glitch-primary"
-    style={
-      {
-        "WebkitTransform": "translate(calc(-50% - 3px), 0px)",
-        "left": "50%",
-        "position": "absolute",
-        "transform": "translate(calc(-50% - 3px), 0px)",
-        "width": 250,
-        "zIndex": 1,
-      }
-    }
+    class="glitch-primary"
+    style="position: absolute; z-index: 1; left: 50%; width: 250px; transform: translate(calc(-50% - 3px), 0px);"
   >
     <div>
       <svg
@@ -240,17 +225,8 @@ exports[`snapshot tests should render all digits 1`] = `
     </div>
   </div>
   <div
-    className="glitch-secondary"
-    style={
-      {
-        "WebkitTransform": "translate(calc(-50% + 3px), 0px)",
-        "left": "50%",
-        "position": "absolute",
-        "transform": "translate(calc(-50% + 3px), 0px)",
-        "width": 250,
-        "zIndex": 1,
-      }
-    }
+    class="glitch-secondary"
+    style="position: absolute; z-index: 1; left: 50%; width: 250px; transform: translate(calc(-50% + 3px), 0px);"
   >
     <div>
       <svg
@@ -469,16 +445,7 @@ exports[`snapshot tests should render all digits 1`] = `
     </div>
   </div>
   <div
-    style={
-      {
-        "WebkitTransform": "translate(calc(-50% + 0px), 0px)",
-        "left": "50%",
-        "position": "absolute",
-        "transform": "translate(calc(-50% + 0px), 0px)",
-        "width": 250,
-        "zIndex": 2,
-      }
-    }
+    style="position: absolute; z-index: 2; left: 50%; width: 250px; transform: translate(calc(-50% + 0px), 0px);"
   >
     <div>
       <svg

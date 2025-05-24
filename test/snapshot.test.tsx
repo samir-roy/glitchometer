@@ -1,10 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Glitchometer from '../src';
 
 describe('snapshot tests', () => {
   it('should render all digits', () => {
-    const tree = renderer.create(<Glitchometer value="91,345.02%" />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = render(<Glitchometer value="91,345.02%" />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
