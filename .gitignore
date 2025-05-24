@@ -2,5 +2,6 @@ node_modules/
 .cache/
 public
 dist-pkg/
+storybook-static/
 
 .DS_Store
